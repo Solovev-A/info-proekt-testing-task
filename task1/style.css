@@ -1,0 +1,202 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Montserrat", sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    color: #555555;
+}
+
+body {
+    padding: 0 10px;
+}
+
+main {
+    margin: 0 auto;
+    max-width: 1500px;
+}
+
+article {
+    margin-bottom: 56px;
+}
+
+h1 {
+    margin-bottom: 1em;
+    font-size: 40px;
+    font-weight: 800;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #01348d;
+}
+
+h2 {
+    margin-bottom: 1.5em;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+ul {
+    list-style: none;
+}
+
+.text-highlighted {
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    color: #f2a428;
+}
+
+.row {
+    /*margin: -0.5rem -10px;*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 40px;
+    column-gap: 20px;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+}
+
+.col-content {
+    margin-top: auto !important;
+}
+
+.international-program .col:first-child {
+    flex-grow: 1;
+    flex-basis: 648px;
+}
+
+.international-program h2 {
+    margin-bottom: 1em;
+    color: #01348d;
+}
+
+.international-program ul {
+    margin-bottom: 40px;
+}
+
+.row.russian-program {
+    column-gap: 80px;
+}
+
+.russian-program > col {
+    /* flex-grow: 1; */
+}
+
+.exam-container {
+    max-width: 576px;
+    row-gap: 1rem;
+}
+
+.course > p {
+    margin-bottom: 0.3rem;
+}
+
+.course > span {
+    width: 260px;
+    height: 56px;
+    padding-left: 0.67rem;
+    display: inline-flex;
+    align-items: center;
+    color: #ffffff;
+}
+
+.ege > .course:nth-child(1) > span {
+    background-image: url(img/scale-literature.svg);
+}
+
+.ege > .course:nth-child(2) > span {
+    background-image: url(img/scale-english.svg);
+}
+
+.ege > .course:nth-child(3) > span {
+    background-image: url(img/scale-physics.svg);
+}
+
+.ege > .course:nth-child(4) > span {
+    background-image: url(img/scale-chemistry.svg);
+}
+
+.ege > .course:nth-child(5) > span {
+    background-image: url(img/scale-russian.svg);
+}
+
+.ege > .course:nth-child(6) > span {
+    background-image: url(img/scale-history.svg);
+}
+
+.universities {
+    align-self: center;
+    flex-grow: 1;
+}
+
+.universities > ul {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(4, auto);
+    row-gap: 19px;
+    column-gap: 10px;
+
+    font-size: 0.5rem;
+    line-height: 130%;
+}
+
+.university-item {
+    max-width: 235px;
+    display: flex;
+    align-items: center;
+}
+
+.cap {
+    width: 64px;
+    height: 37px;
+    margin-right: 5px;
+    padding-top: 5px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    background-image: url(img/cap-normal.svg);
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.cap-highlighted {
+    background-image: url(img/cap-highlight.svg);
+}
+
+.oge > .course > span {
+    background-image: url(img/scale-5.0.svg);
+}
+
+.oge > .course:nth-child(5) > span {
+    background-image: url(img/scale-4.6.svg);
+}
+
+.achievement {
+    margin-bottom: 1rem;
+}
+
+.achievement:last-child {
+    margin-bottom: 0;
+}
+
+.row.achievement {
+    column-gap: 40px;
+}
+
+.achievement > p {
+    max-width: 630px;
+    align-self: center;
+    flex-basis: 400px;
+    flex-grow: 1;
+    letter-spacing: -0.04em;
+}
