@@ -28,7 +28,7 @@ main {
 }
 
 article {
-    margin-bottom: 56px;
+    margin-bottom: calc(1rem * 5 / 3);
 }
 
 h1 {
@@ -36,6 +36,7 @@ h1 {
     font-size: calc(1rem * 5 / 3);
     font-weight: 800;
     letter-spacing: 0.03em;
+    line-height: 130%;
     text-transform: uppercase;
     color: #01348d;
 }
@@ -100,7 +101,10 @@ ul {
 }
 
 .exam-container {
-    max-width: 576px;
+    max-width: 588px;
+}
+
+.exam-container .row {
     row-gap: 1rem;
 }
 
@@ -146,7 +150,7 @@ ul {
     flex-grow: 1;
 }
 
-.universities > ul {
+.universities ul {
     display: grid;
     grid-auto-flow: column;
     grid-template-rows: repeat(4, auto);
