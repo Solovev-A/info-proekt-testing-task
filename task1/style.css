@@ -200,3 +200,10 @@ ul {
     flex-grow: 1;
     letter-spacing: -0.04em;
 }
+
+.column-container {
+    display: flex;
+    align-items: stretch;
+    flex-basis: 500px;
+    flex-grow: 1;
+}
