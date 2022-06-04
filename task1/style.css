@@ -10,11 +10,16 @@ html {
     font-style: normal;
     font-weight: 400;
     line-height: 130%;
+    letter-spacing: -0.04em;
     color: #555555;
 }
 
 body {
-    padding: 0 10px;
+    padding: 15px;
+}
+
+img {
+    max-width: 100%;
 }
 
 main {
@@ -28,7 +33,7 @@ article {
 
 h1 {
     margin-bottom: 1em;
-    font-size: 40px;
+    font-size: calc(1rem * 5 / 3);
     font-weight: 800;
     letter-spacing: 0.03em;
     text-transform: uppercase;
@@ -39,6 +44,7 @@ h2 {
     margin-bottom: 1.5em;
     font-weight: 700;
     font-size: 1rem;
+    letter-spacing: normal;
 }
 
 ul {
@@ -52,12 +58,18 @@ ul {
 }
 
 .row {
-    /*margin: -0.5rem -10px;*/
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     row-gap: 40px;
     column-gap: 20px;
+}
+
+.column-container {
+    display: flex;
+    align-items: stretch;
+    flex-basis: 500px;
+    flex-grow: 1;
 }
 
 .col {
@@ -80,15 +92,11 @@ ul {
 }
 
 .international-program ul {
-    margin-bottom: 40px;
+    margin-bottom: calc(1rem * 5 / 3);
 }
 
 .row.russian-program {
     column-gap: 80px;
-}
-
-.russian-program > col {
-    /* flex-grow: 1; */
 }
 
 .exam-container {
@@ -97,7 +105,7 @@ ul {
 }
 
 .course > p {
-    margin-bottom: 0.3rem;
+    margin-bottom: calc(1rem / 3);
 }
 
 .course > span {
@@ -144,8 +152,7 @@ ul {
     grid-template-rows: repeat(4, auto);
     row-gap: 19px;
     column-gap: 10px;
-
-    font-size: 0.5rem;
+    font-size: 12px;
     line-height: 130%;
 }
 
@@ -196,14 +203,76 @@ ul {
 .achievement > p {
     max-width: 630px;
     align-self: center;
-    flex-basis: 400px;
+    flex-basis: 300px;
     flex-grow: 1;
-    letter-spacing: -0.04em;
 }
 
-.column-container {
-    display: flex;
-    align-items: stretch;
-    flex-basis: 500px;
-    flex-grow: 1;
+@media (max-width: 1476px) {
+    .exam-container {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+
+    .exam-container .col {
+        width: 100%;
+    }
+
+    .exam-container .col-content {
+        max-width: 1100px;
+        align-self: center;
+    }
+
+    .col-content {
+        justify-content: center;
+    }
+
+    .universities > ul {
+        grid-template-rows: repeat(2, auto);
+        font-size: calc(1rem * 2 / 3);
+    }
+
+    .achievement > p {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 992px) {
+    .universities > ul {
+        grid-template-rows: repeat(2, auto);
+        font-size: 0.5rem;
+    }
+}
+
+@media (max-width: 767px) {
+    html {
+        font-size: 16px;
+    }
+
+    .row {
+        row-gap: 20px;
+    }
+
+    .universities > ul {
+        grid-template-rows: repeat(3, auto);
+    }
+
+    .course > span {
+        width: calc(260px * 0.6);
+        height: calc(56px * 0.6);
+        background-size: 100%;
+    }
+
+    .achievement > img {
+        max-width: 70px;
+    }
+}
+
+@media (max-width: 481px) {
+    .universities > ul {
+        grid-template-rows: repeat(4, auto);
+    }
+
+    .achievement > img {
+        max-width: 40px;
+    }
 }
