@@ -97,11 +97,11 @@ ul {
 }
 
 .row.russian-program {
-    column-gap: 80px;
+    column-gap: 88px;
 }
 
 .exam-container {
-    max-width: 588px;
+    max-width: 580px;
 }
 
 .exam-container .row {
@@ -147,12 +147,12 @@ ul {
 
 .universities {
     align-self: center;
-    flex-grow: 1;
 }
 
 .universities ul {
     display: grid;
     grid-auto-flow: column;
+    grid-auto-columns: 1fr;
     grid-template-rows: repeat(4, auto);
     row-gap: 19px;
     column-gap: 10px;
@@ -161,7 +161,7 @@ ul {
 }
 
 .university-item {
-    max-width: 235px;
+    max-width: 230px;
     display: flex;
     align-items: center;
 }
@@ -211,7 +211,7 @@ ul {
     flex-grow: 1;
 }
 
-@media (max-width: 1476px) {
+@media (max-width: 1525px) {
     .exam-container {
         flex-basis: 100%;
         max-width: 100%;
@@ -242,7 +242,6 @@ ul {
 
 @media (max-width: 992px) {
     .universities > ul {
-        grid-template-rows: repeat(2, auto);
         font-size: 0.5rem;
     }
 }
