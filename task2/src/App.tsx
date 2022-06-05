@@ -18,7 +18,10 @@ export const App = () => {
 
     useEffect(() => {
         fetchStoresData()
-            .then(parseStoresData)
+            .then(csv => parseStoresData(csv, 500))
+            // В соответствии с заданием, выбирается 500 магазинов.
+            // В связи с тем, что в исходных данных более 1400 уникальных адресов, а критерий выборки не задан,
+            // отбираются первые записи по порядку.
             .then(setMapPoints);
     }, []);
 
@@ -47,17 +50,14 @@ export const App = () => {
 
     const handleSearch = useCallback((searchQuery: string) => {
         const regexp = new RegExp(`${searchQuery}`, 'i');
-
-        const filtered = towns
-            .filter(town => regexp.test(town))
-            .slice(0, 9);
+        const filtered = towns.filter(town => regexp.test(town));
         setFilteredTowns(filtered);
     }, [towns]);
 
     return (
         <div className='container'>
             <div className='select__container'>
-                <label>Выберите город (отображаются первые 10 результатов поиска)</label>
+                <label>Выберите город</label>
                 <Autocomplete
                     options={filteredTowns}
                     value={selectedTown}
